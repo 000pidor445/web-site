@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 *,
 *::before,
@@ -36,125 +36,142 @@ h6 {
 html,
 body {
     height: 100%;
-    line-height: 1;
+    line-height: 1.5;
 }
 
-/* -------------------------------------------- */
-
-.main {
-    flex: 1 1 auto;
-}
-
+/* Global Styles */
 body {
-    position: relative;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    color: #000;
-    font-weight: 600;
-    background: #fff;
+    color: #333;
+    background: #f0f2f5;
 }
 
 .wrapper {
-    overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 1280px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 15px;
 }
 
-.button {
-   color: #fff;
-   background-color: rgb(38, 2, 170);
-   padding: 10px 30px;
-   border-radius: 10px;
-   transition: all .2s;
-}
-
-.button:hover {
-    background-color: rgb(77, 30, 245);
-}
-
-/* ---header------------ */
-
 .header {
-    position: relative;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    padding: 20px 0;
 }
 
 .header__logo img {
-    max-width: 150px;
+    max-width: 120px;
 }
 
 .header__list {
     display: flex;
-    align-items: center;
     gap: 20px;
 }
 
+
 .header__list a {
-    color: rgb(38, 2, 170);
-    transition: all .5s;
+    font-weight: 600;
+    color: #262aae;
+    transition: color 0.3s;
 }
 
 .header__list a:hover {
-    color: rgb(77, 30, 245);
+    color: #4d1ef5;
 }
 
-/* ----game----------- */
+/* Main Sections */
+.main {
+    flex: 1;
+}
 
+.section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #262aae;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #262aae;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #4d1ef5;
+}
+
+/* Game Section */
 .game {
-    margin-top: 60px;
+    background-image: url('img/game-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
 }
 
-.game__title {
-    font-size: 52px;
-}
-
-.game__text {
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-/* ----fails------------------ */
-
-.fails {
-    margin-top: 60px;
-}
-
-.fails__title {
-    font-size: 52px;
-}
-
-.fails__text {
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-/* --kopsavilkums------- */
-
-.kopsavilkums {
-    margin-top: 60px;
-}
-
+.game__title,
+.fails__title,
 .kopsavilkums__title {
-    font-size: 52px;
+    font-size: 48px;
+    color: black;
+    margin-bottom: 10px;
 }
 
+.game__text,
+.fails__text,
 .kopsavilkums__text {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    font-size: 20px;
 }
 
+/* Specific Styles for Sections */
+.game__container,
+.fails__container,
+.kopsavilkums__container {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.game__container {
+    margin-top: 60px;
+}
 
+.fails__container {
+    margin-top: 40px;
+}
+
+.kopsavilkums__container {
+    margin-top: 40px;
+}

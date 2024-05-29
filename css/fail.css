@@ -1,11 +1,7 @@
-#out {
-    width: 300px; height: 300px; object-fit: contain; display: block;
-  }
-  
-  /* hide if it would show the error img */
-  #out[src=''] {
-    opacity: 0;
-  }
+.title__gallery {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
 
   .fail {
     margin-top: 40px;
@@ -63,4 +59,11 @@
 .slide.slide.active h3 {
   opacity: 1;
   transition: opacity 0.3 ease-in 0.4s;
+}
+
+.delete-btn {
+  margin: 10px 0 0 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
 }
